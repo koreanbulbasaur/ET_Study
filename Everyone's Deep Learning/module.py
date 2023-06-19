@@ -10,6 +10,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 from attention import Attention
 
+optimizers = tf.keras.optimizers
+metrics = tf.keras.metrics
+Input = tf.keras.Input
+models = tf.keras.models
+layers = tf.keras.layers
+
 # models
 Sequential = tf.keras.models.Sequential
 Model = tf.keras.models.Model
@@ -29,7 +35,7 @@ LeakyReLU = tf.keras.layers.LeakyReLU
 UpSampling2D = tf.keras.layers.UpSampling2D
 Conv2D = tf.keras.layers.Conv2D
 Flatten = tf.keras.layers.Flatten
-
+MaxPooling2D = tf.keras.layers.MaxPooling2D
 
 # utils
 to_categorical = tf.keras.utils.to_categorical
@@ -39,6 +45,7 @@ sequence = tf.keras.preprocessing.sequence
 Tokenizer = tf.keras.preprocessing.text.Tokenizer
 text_to_word_sequence = tf.keras.preprocessing.text.text_to_word_sequence
 pad_sequence = tf.keras.preprocessing.sequence.pad_sequences
+ImageDataGenerator = tf.keras.preprocessing.image.ImageDataGenerator
 
 # callbacks
 EarlyStopping = tf.keras.callbacks.EarlyStopping
@@ -47,3 +54,6 @@ EarlyStopping = tf.keras.callbacks.EarlyStopping
 reuters = tf.keras.datasets.reuters
 imdb = tf.keras.datasets.imdb
 mnist = tf.keras.datasets.mnist
+
+# applications
+VGG16 = tf.keras.applications.VGG16
