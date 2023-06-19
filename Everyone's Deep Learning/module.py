@@ -9,6 +9,8 @@ import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
 from attention import Attention
+from tf_explain.core.grad_cam import GradCAM
+from tf_explain.core.occlusion_sensitivity import OcclusionSensitivity
 
 optimizers = tf.keras.optimizers
 metrics = tf.keras.metrics
