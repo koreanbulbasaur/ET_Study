@@ -59,3 +59,6 @@ mnist = tf.keras.datasets.mnist
 
 # applications
 VGG16 = tf.keras.applications.VGG16
+
+# 한글
+plt.rcParams['font.family'] = 'Malgun Gothic'
