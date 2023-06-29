@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>이미지 파일 업로드</title>
+  </head>
+  <body>
+    <input type="file" id="imageUpload" multiple accept="image/*">
+    <script>
+      document.getElementById('imageUpload').addEventListener('change', handleImageUpload);
+
+      function handleImageUpload(event) {
+        var files = event.target.files;
+        for (var i = 0; i < files.length; i++) {
+          var file = files[i];
+          if (file.type.match('image.*')) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+              var image = new Image();
+              image.src = e.target.result;
+              document.body.appendChild(image);
+            };
+            reader.readAsDataURL(file);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
