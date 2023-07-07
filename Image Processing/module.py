@@ -12,12 +12,19 @@ import matplotlib.pyplot as plt
 from attention import Attention
 from tf_explain.core.grad_cam import GradCAM
 from tf_explain.core.occlusion_sensitivity import OcclusionSensitivity
+import os
+import glob
 
 optimizers = tf.keras.optimizers
 metrics = tf.keras.metrics
 Input = tf.keras.Input
 models = tf.keras.models
 layers = tf.keras.layers
+
+# inception_v3
+InceptionV3 = tf.keras.applications.inception_v3.InceptionV3
+preprocess_input = tf.keras.applications.inception_v3.preprocess_input
+decode_predictions = tf.keras.applications.inception_v3.decode_predictions
 
 # models
 Sequential = tf.keras.models.Sequential
@@ -49,6 +56,8 @@ Tokenizer = tf.keras.preprocessing.text.Tokenizer
 text_to_word_sequence = tf.keras.preprocessing.text.text_to_word_sequence
 pad_sequence = tf.keras.preprocessing.sequence.pad_sequences
 ImageDataGenerator = tf.keras.preprocessing.image.ImageDataGenerator
+load_img = tf.keras.preprocessing.image.load_img
+img_to_array = tf.keras.preprocessing.image.img_to_array
 
 # callbacks
 EarlyStopping = tf.keras.callbacks.EarlyStopping
