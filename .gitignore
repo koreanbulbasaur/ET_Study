@@ -1,0 +1,32 @@
+## 파일 무시
+checkpoint
+
+## 다음과 같은 확장자는 전체 무시
+*.exe
+*.zip
+*.data-00000-of-00001
+*.index
+*.pyc
+*.whl
+*.htdf5
+*.hdf5
+*.h5
+*.pkl
+*.pb
+*.caffemodel
+*.onnx
+*.npy
+*.damx
+
+## 폴더 무시
+Image_Processing/img_align_celeba/
+NLP/filepath=/
+NLP/filepath=/model_save/
+Image_Processing/chapter_2/data/
+Image_Processing/chapter_1/data/
+Everyone's_Deep_Learning/1/data/img/
+Everyone's_Deep_Learning/2/img/
+Everyone's_Deep_Learning/4/data/img/
+Everyone's_Deep_Learning/5/data/img/
+Everyone's_Deep_Learning/5/data-ch20/
+Everyone's_Deep_Learning/5/gan_images/
