@@ -1,5 +1,7 @@
 ## 파일 무시
 checkpoint
+Dockerfile_cpu
+Dockerfile_gpu
 
 ## 다음과 같은 확장자는 전체 무시
 *.exe
@@ -17,6 +19,8 @@ checkpoint
 *.onnx
 *.npy
 *.damx
+*.sh
+*.ttf
 
 ## 폴더 무시
 Image_Processing/img_align_celeba/
